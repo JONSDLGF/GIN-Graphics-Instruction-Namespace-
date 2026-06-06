@@ -6,9 +6,12 @@ import sdl2.ext
 # vars
 class Win:
     window = None
+
+    init   = False
     title  = ""
     w      = 0
     h      = 0
+    
     GAFICS = {
         "CAP":[],
         "ASS":{
@@ -32,11 +35,15 @@ def Win_start():
     )
 
     Win.window.show()
+    Win.init = True
+    print("[ OK ] Gin it's ready")
 
 def Win_clear():
+    if(~Win.init):return;
     pass #; clear
 
 def Win_render():
+    if(~Win.init):return;
     for cap in Win.GAFICS["CAP"]:
         if not cap[0]:continue
         for inst in cap[2]:
@@ -48,17 +55,4 @@ def Win_render():
                 case 3: #; 3D
                     pass #; render 3D scene
 
-class GApi:
-    @staticmethod
-    def new_img(obj):
-        imgs = Win.GAFICS["ASS"]["IMG"]
-
-        idx = 0
-        while idx in imgs:
-            idx += 1
-
-        imgs[idx] = obj
-        return idx
-    @staticmethod
-    def del_img(idx):
-        Win.GAFICS["ASS"]["IMG"].pop(idx, None)
+class GApi:...

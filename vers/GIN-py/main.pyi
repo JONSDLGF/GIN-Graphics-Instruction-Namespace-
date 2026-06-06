@@ -10,3 +10,6 @@ def Win_clear() -> None:
 
 def Win_render() -> None:
     "render"
+
+class GApi:
+    "the api"
