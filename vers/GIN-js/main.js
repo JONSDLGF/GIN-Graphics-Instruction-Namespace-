@@ -1,30 +1,45 @@
-{
-    class Win {
-        window = null;
-        title  = "";
-        w      = 0;
-        h      = 0;
-        GAFICS = {
-            CAP:[],
-            ASS:{
-                MOD:[],
-                IMG:[]
-            },
-            CAM:[]
-        };
-    }
+class Win {
+    static window = null;
+    static title = "";
+    static w = 0;
+    static h = 0;
 
-    function Win_new(title,w,h){
-        Win.title = title;
-        Win.w = w;
-        Win.h = h;
-    }
+    static GAFICS = {
+        CAP: [],
+        ASS: {
+            MOD: {},
+            IMG: {},
+            CAM: {}
+        },
+    };
+}
+
+export function Win_new(title, w, h) {
+    Win.title = title;
+    Win.w = w;
+    Win.h = h;
+}
+
+export function Win_start() {
+    const canvas = document.createElement("canvas");
+
+    canvas.width = Win.w;
+    canvas.height = Win.h;
+
+    document.title = Win.title;
+    document.body.appendChild(canvas);
+
+    Win.window = canvas;
+}
+
+export function Win_clear() {
     
-    function Win_start(){
-        const camvas = document.createEvent("camvas");
-        Win.window = document.body.appendChild(canvas);
-        Win.window.h = Win.h;
-        Win.window.w = Win.w;
-        Win.window.title = Win.title;
-    }
+}
+
+export function Win_render() {
+
+}
+
+export class GApi {
+    
 }

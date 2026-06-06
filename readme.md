@@ -23,19 +23,16 @@ The application should not need to know which graphics backend is being used.
 
 ## Roadmap
 
-### v0.1
+### v0.x
 
-* [ ] Add Canvas support
-* [ ] Create basic window system
-* [ ] Draw rectangles
-* [ ] Draw images
-* [ ] Scene management
-* [ ] WebGL support
-* [ ] 2D renderer
-* [ ] 3D renderer
-* [ ] Camera system
-* [ ] Asset manager
-* [ ] Cross-platform support
+* [ ] Create api support
+
+### v1.0
+
+* [ ] ADD c    support
+* [ ] ADD py   support
+* [ ] ADD js   support
+* [ ] ADD java support
 
 ## Philosophy
 
